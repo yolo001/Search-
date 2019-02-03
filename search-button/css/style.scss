@@ -1,0 +1,86 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(28, 39, 54);
+
+    .container{
+        text-align: center
+    }
+
+    h1{
+        color: white;
+        font-size: 3.5em;
+    }
+
+    .search-contain{
+        
+
+        img{
+            width: 22px;
+            margin: 18px 0 0 18px;
+            position: absolute;
+            cursor: pointer;
+
+        }
+
+        input{
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgba(0, 65, 245, 0.973);
+            width: 20px;
+            height: 20px;
+            padding: 20px;
+            border-radius: 30px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.6em;
+            transition: width 2s ease;
+            
+            &::placeholder{
+                color: rgb(75, 199, 236);
+            }
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        p{
+            color: rgb(49, 49, 252);
+            text-transform: uppercase;
+            font-size: .8em;
+            text-align: left;
+            margin-left: 50px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 2s;
+             
+        }
+    }
+}
+
+.search-contain::before{
+    content: '';
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid white;
+    position: absolute;
+    animation: my-animation 1s infinite;
+}
+    @keyframes my-animation {
+        from{
+            transform: scale(1);
+        }
+
+        to{
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+
+
